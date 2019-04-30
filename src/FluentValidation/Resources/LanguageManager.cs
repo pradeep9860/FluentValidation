@@ -45,43 +45,42 @@ namespace FluentValidation.Resources {
 		/// <param name="culture">The culture code.</param>
 		/// <returns>The corresponding Language instance or null.</returns>
 		private static Language CreateLanguage(string culture) {
-			switch (culture) {
-				case EnglishLanguage.Culture: return new EnglishLanguage();
-				case AlbanianLanguage.Culture: return new AlbanianLanguage();
-				case ArabicLanguage.Culture: return new ArabicLanguage();
-				case ChineseSimplifiedLanguage.Culture: return new ChineseSimplifiedLanguage();
-				case ChineseTraditionalLanguage.Culture: return new ChineseTraditionalLanguage();
-				case CroatianLanguage.Culture: return new CroatianLanguage();
-				case CzechLanguage.Culture: return new CzechLanguage();
-				case DanishLanguage.Culture: return new DanishLanguage();
-				case DutchLanguage.Culture: return new DutchLanguage();
-				case FinnishLanguage.Culture: return new FinnishLanguage();
-				case FrenchLanguage.Culture: return new FrenchLanguage();
-				case GermanLanguage.Culture: return new GermanLanguage();
-				case GeorgianLanguage.Culture: return new GeorgianLanguage();
-				case GreekLanguage.Culture: return new GreekLanguage();
-				case HebrewLanguage.Culture: return new HebrewLanguage();
-				case HindiLanguage.Culture: return new HindiLanguage();
-				case ItalianLanguage.Culture: return new ItalianLanguage();
-				case JapaneseLanguage.Culture: return new JapaneseLanguage();
-				case KoreanLanguage.Culture: return new KoreanLanguage();
-				case MacedonianLanguage.Culture: return new MacedonianLanguage();
-				case NorwegianBokmalLanguage.Culture: return new NorwegianBokmalLanguage();
-				case PersianLanguage.Culture: return new PersianLanguage();
-				case PolishLanguage.Culture: return new PolishLanguage();
-				case PortugueseLanguage.Culture: return new PortugueseLanguage();
-				case PortugueseBrazilLanguage.Culture: return new PortugueseBrazilLanguage();
-				case RomanianLanguage.Culture: return new RomanianLanguage();
-				case RussianLanguage.Culture: return new RussianLanguage();
-				case SlovakLanguage.Culture: return new SlovakLanguage();
-				case SpanishLanguage.Culture: return new SpanishLanguage();
-				case SwedishLanguage.Culture: return new SwedishLanguage();
-				case TurkishLanguage.Culture: return new TurkishLanguage();
-				case UkrainianLanguage.Culture: return new UkrainianLanguage();
-				default: return null;
-			}
+			return culture switch {
+				EnglishLanguage.Culture => new EnglishLanguage(),
+				AlbanianLanguage.Culture => new AlbanianLanguage(),
+				ArabicLanguage.Culture => new ArabicLanguage(),
+				ChineseSimplifiedLanguage.Culture => new ChineseSimplifiedLanguage(),
+				ChineseTraditionalLanguage.Culture => new ChineseTraditionalLanguage(),
+				CroatianLanguage.Culture => new CroatianLanguage(),
+				CzechLanguage.Culture => new CzechLanguage(),
+				DanishLanguage.Culture => new DanishLanguage(),
+				DutchLanguage.Culture => new DutchLanguage(),
+				FinnishLanguage.Culture => new FinnishLanguage(),
+				FrenchLanguage.Culture => new FrenchLanguage(),
+				GermanLanguage.Culture => new GermanLanguage(),
+				GeorgianLanguage.Culture => new GeorgianLanguage(),
+				GreekLanguage.Culture => new GreekLanguage(),
+				HebrewLanguage.Culture => new HebrewLanguage(),
+				HindiLanguage.Culture => new HindiLanguage(),
+				ItalianLanguage.Culture => new ItalianLanguage(),
+				JapaneseLanguage.Culture => new JapaneseLanguage(),
+				KoreanLanguage.Culture => new KoreanLanguage(),
+				MacedonianLanguage.Culture => new MacedonianLanguage(),
+				NorwegianBokmalLanguage.Culture => new NorwegianBokmalLanguage(),
+				PersianLanguage.Culture => new PersianLanguage(),
+				PolishLanguage.Culture => new PolishLanguage(),
+				PortugueseLanguage.Culture => new PortugueseLanguage(),
+				PortugueseBrazilLanguage.Culture => new PortugueseBrazilLanguage(),
+				RomanianLanguage.Culture => new RomanianLanguage(),
+				RussianLanguage.Culture => new RussianLanguage(),
+				SlovakLanguage.Culture => new SlovakLanguage(),
+				SpanishLanguage.Culture => new SpanishLanguage(),
+				SwedishLanguage.Culture => new SwedishLanguage(),
+				TurkishLanguage.Culture => new TurkishLanguage(),
+				UkrainianLanguage.Culture => new UkrainianLanguage(),
+				_=> (Language)null,
+			};
 		}
-
 
 		/// <summary>
 		/// Whether localization is enabled.
